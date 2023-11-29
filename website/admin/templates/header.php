@@ -1,7 +1,9 @@
+<?php $url_base="http://localhost/website/admin/"; ?>
+
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Title</title>
+  <title>Admin con php</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,12 +19,13 @@
     <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="nav navbar-nav">
             <a class="nav-item nav-link active" href="#" aria-current="page">Administrador <span class="visually-hidden">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Servicio</a>
-            <a class="nav-item nav-link" href="#">Portafolio</a>
-            <a class="nav-item nav-link" href="#">Entradas</a>
-            <a class="nav-item nav-link" href="#">Equipo</a>
-            <a class="nav-item nav-link" href="#">Configuraciones</a>
-            <a class="nav-item nav-link" href="#">Contacto</a>
+            <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/servicios/">Servicios</a>
+            <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/portafolio/">Portafolio</a>
+            <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/entradas/">Entradas</a>
+            <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/equipo/">Equipo</a>
+            <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/configuraciones/">Configuraciones</a>
+            <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/usuarios/">Usuarios</a>
+            <a class="nav-item nav-link" href="<?php echo $url_base;?>login.php">Cerrar sesión</a>
         </div>
     </nav>
   </header>
