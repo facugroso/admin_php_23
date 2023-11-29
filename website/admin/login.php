@@ -6,7 +6,7 @@ include("./bd.php");
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Login</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,41 @@ include("./bd.php");
     <!-- place navbar here -->
   </header>
   <main>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        ...
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            Login
+          </div>
+          <div class="card-body">
+            <form action="" method="post">
 
+              <div class="mb-3">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input type="text"
+                  class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">f_groso</small>
+              </div>
+              <div class="mb-3">
+                <label for="contrasenia" class="form-label">Contrasenia</label>
+                <input type="password" class="form-control" name="contrasenia" id="contrasenia" placeholder="introduce aquì tu contrasenia">
+              </div>
+
+              <a name="" id="" class="btn btn-success" href="index.php" role="button">Entrar</a>
+
+            </form>
+          </div>
+          <div class="card-footer text-muted">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
   </main>
   <footer>
     <!-- place footer here -->
