@@ -1,14 +1,15 @@
 <?php include("../../templates/header.php"); ?>
 
-Crear servicios
 
 
 <div class="card">
+
     <div class="card-header">
+        Crear servicios
     </div>
 
-
     <div class="card-body">
+
         <form action="" enctype="multipart/from-data" method="post">
 
             <div class="mb-3">
@@ -33,6 +34,7 @@ Crear servicios
             <a name="" id="" class="btn btn-secondary" href="index.php" role="button">Cancelar</a>
 
         </form>
+        
     </div>
 
 
