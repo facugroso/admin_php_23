@@ -1,7 +1,7 @@
 <?php
 
 $servidor="localhost";
-$baseDeDatos="mysql";
+$baseDeDatos="website";
 $usuario="root";
 $contrasenia="";
 
