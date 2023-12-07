@@ -1,6 +1,30 @@
-<?php include("../../templates/header.php"); ?>
+<?php
+
+include("../../bd.php");
+
+    if(isset($_GET["txtID"])){
+        // borrar dicho registro con el ID  correspondiente
+
+        // echo $_GET["txtID"];   //me dice que elemento selecciono al momento de eliminar
+
+        $txtID=( isset($_GET['txtID'])) ?$_GET['txtID']:"";
+
+        $sentencia=$conexion->prepare("DELETE FROM tbl_servicios WHERE id=:id") ;
+        $sentencia->bindParam(":id", $txtID);
+        $sentencia->execute();
+
+    }
+
+    //seleccionar registros
+    $sentencia=$conexion->prepare("SELECT * FROM `tbl_servicios`");
+    $sentencia->execute();
+    $lista_servicios=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+    
+    // print_r($lista_servicios);
 
 
+
+include("../../templates/header.php"); ?>
 
 <div class="card ">
     <div class="card-header">
@@ -19,13 +43,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($lista_servicios as $registros){?>
                     <tr class="">
-                        <td >1</td>
-                        <td>fa-book</td>
-                        <td>Tutorias</td>
-                        <td>Servicios de tutorias para programación</td>
-                        <td>Editar | Eliminar</td>
+                        <td><?php echo $registros['ID']; ?></td>
+                        <td><?php echo $registros['icono']; ?></td>
+                        <td><?php echo $registros['titulo']; ?></td>
+                        <td><?php echo $registros['descripcion']; ?></td>
+                        <td>
+                        <a name="" id="" class="btn btn-info" href="#" role="button">Editar</a>
+                        |
+                        
+                        <a name="" id="" class="btn btn-danger" href="index.php?txtID=<?php echo $registros['ID']; ?>" role="button">Eliminar</a>
+                       </td>
                     </tr>
+                    <?php } ?>
                     
                 </tbody>
             </table>
