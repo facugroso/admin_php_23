@@ -25,7 +25,7 @@ include("./bd.php");
   <div class="container">
     <div class="row">
       <div class="col-4">
-        ...
+        m
       </div>
       <div class="col-4">
         <div class="card">
@@ -38,8 +38,7 @@ include("./bd.php");
               <div class="mb-3">
                 <label for="usuario" class="form-label">Usuario</label>
                 <input type="text"
-                  class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder="">
-                <small id="helpId" class="form-text text-muted">f_groso</small>
+                  class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder="Introduce tu usuario">
               </div>
               <div class="mb-3">
                 <label for="contrasenia" class="form-label">Contrasenia</label>
